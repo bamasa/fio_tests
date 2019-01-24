@@ -106,7 +106,7 @@ def mean_std_lists_to_Ordered_dict(mean_list, std_list):
     ])
 
 
-def parse_fio_tests(json_path="new.json", output_type="normal"):
+def parse_fio_tests(json_path="fio_tests_node_1.json", output_type="normal"):
     """Parse fio tests.
 
     TODO:
@@ -287,8 +287,8 @@ def read_json(json_path):
 
 
 def main():
-    result = parse_fio_tests()
-    save_json(result, "packet_config_v1.json")
+    result = parse_fio_tests("fio_tests/fio_tests_node_3.json")
+    save_json(result, "packet_configs/packet_config_3.json")
 
 if __name__ == "__main__":
     main()
