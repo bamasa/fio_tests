@@ -1,4 +1,4 @@
-# fio test for gotatlin node.
+# fio test for the gotatlin node.
 
 import os
 import subprocess
@@ -205,8 +205,9 @@ def print_end():
 
 def main():
     print_start()
-    result = run_test()
-    # save_json(result, "fio_tests.json")
+    for i in range(100):
+        result = run_test()
+        save_json(result, "fiotests/fio_tests_{}.json".format(i))
     print_end()
 
 if __name__ == '__main__':

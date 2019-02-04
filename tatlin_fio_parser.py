@@ -287,8 +287,8 @@ def read_json(json_path):
 
 
 def main():
-    result = parse_fio_tests("fio_tests/fio_tests_node_3.json")
-    save_json(result, "packet_configs/packet_config_3.json")
+    result = parse_fio_tests("fio_tests/fio_tests_node_sdf.json")
+    save_json(result, "packet_configs/packet_config_sdf.json")
 
 if __name__ == "__main__":
     main()
