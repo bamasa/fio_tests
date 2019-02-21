@@ -1,5 +1,3 @@
-# fio test for the gotatlin node.
-
 import os
 import subprocess
 import time
@@ -8,7 +6,6 @@ import json
 import random
 from collections import OrderedDict
 from pprint import pprint
-
 
 N_DISK_SAMPLE = 5
 RUNTIME = 30
@@ -90,7 +87,7 @@ def run_cmd(*popenargs, input=None, check=False, **kwargs):
     return retcode, stdout, stderr
 
 
-def fio_config(rw, block_size=4, disk_name='sda', iodepth=1):
+def fio_config(rw, block_size=4, disk_name='sda', iodepth=1, random_offset=False):
     """Create fio config.
 
     Args:
@@ -98,6 +95,7 @@ def fio_config(rw, block_size=4, disk_name='sda', iodepth=1):
         blocksize (int): size (kB).
         disk_name (str): disk name.
         iodepth (int): queue depth.
+        random_offset (bool): random fio offset (avoid caching).
 
     Returns:
         config (str): fio config.
@@ -111,8 +109,9 @@ rw={}
 direct=1
 buffered=0
 ioengine=libaio
-iodepth={}
-""".format(test_name, block_size, disk_name, rw, iodepth)
+iodepth={}""".format(test_name, block_size, disk_name, rw, iodepth)
+    if random_offset:
+        config += '\noffset={}'.format(np.random.randint(100) + 1)
     return config
 
 # test = """[readtest]
@@ -122,8 +121,7 @@ iodepth={}
 # direct=1
 # buffered=0
 # ioengine=libaio
-# iodepth=16
-# """
+# iodepth=16"""
 
 # assert test == create_fio_config('read', 4, 'sda', 16)
 
@@ -133,14 +131,15 @@ def save_fio_config(config, filepath='test.ini'):
         f.write(config)
 
 
-def run_test(block_sizes=BLOCK_SIZES, n_disks_sample=N_DISK_SAMPLE,
-             disks=DISKS, runtime=RUNTIME, timeout=RUNTIME * 3, iodepth=1,
-             config_path='test.ini', rw_list=RW_LIST, output_format='normal'):
+def run_test(block_sizes=BLOCK_SIZES, disks=DISKS, n_disks_sample=N_DISK_SAMPLE,
+             runtime=RUNTIME, timeout=RUNTIME * 3, iodepth=1, config_path='test.ini',
+             rw_list=RW_LIST, output_format='normal', random_offset=False):
     """Run fio tests.
 
     Args:
         block_size (int): size (kB).
-        n_disks_sample (int): number of tested disks.
+        n_disks_sample (int or None): test all disks without sampling if None,
+            otherwise number sampling of tested disks.
         disks (list of str): list of available disks.
         runtime(int): test runtime (sec).
         timeout (int): timeout (sec).
@@ -148,6 +147,7 @@ def run_test(block_sizes=BLOCK_SIZES, n_disks_sample=N_DISK_SAMPLE,
         config_path (str): temp path to config.
         rw_list (list of str): list of read/write tests.
         output_format ('normal' or 'json'): fio output format.
+        random_offset (bool): random fio offset (avoid caching).
 
     Returns:
         result (OrderedDict): results of fio tests.
@@ -168,13 +168,17 @@ def run_test(block_sizes=BLOCK_SIZES, n_disks_sample=N_DISK_SAMPLE,
             print("\nsize: {}K".format(block_size))
             size = str(block_size) + "K"
             result[size] = OrderedDict()
-            for _ in range(n_disks_sample):
-                disk = random.choice(disks)
+            if n_disks_sample is not None:
+                disks_sample = random.choice(disks, n_disks_sample)
+            else:
+                disks_sample = disks
+            for disk in disks:
                 print("\n\tdisk: " + disk)
                 result[size][disk] = OrderedDict()
                 for rw in rw_list:
                     print("\t\ttest_name:", rw)
-                    config = fio_config(rw, block_size, disk, iodepth)
+                    config = fio_config(
+                        rw, block_size, disk, iodepth, random_offset)
                     save_fio_config(config, config_path)
                     cmd = "sudo fio {} --runtime={} --output-format={}".format(
                         config_path, runtime, output_format)
@@ -191,24 +195,3 @@ def run_test(block_sizes=BLOCK_SIZES, n_disks_sample=N_DISK_SAMPLE,
 def save_json(dict, save_path):
     with open(save_path, 'w') as fp:
         json.dump(dict, fp, indent=2)
-
-
-def print_start():
-    print("#start")
-    test_time = N_DISK_SAMPLE * len(RW_LIST) * RUNTIME * len(BLOCK_SIZES)
-    print("#test time: {} min".format(test_time / 60))
-
-
-def print_end():
-    print("\n#done")
-
-
-def main():
-    print_start()
-    for i in range(100):
-        result = run_test()
-        save_json(result, "fiotests/fio_tests_{}.json".format(i))
-    print_end()
-
-if __name__ == '__main__':
-    main()
