@@ -51,7 +51,7 @@ DISKS = [
     "sdw",  # 18.90    607.26       245.82 1594750044  645552644
     "sdx",  # 14.50    302.97       190.37  795653792  499946260
     "sdy",  # 16.01    413.48       216.13 1085859396  567593784
-    "sdz",  # 38.65  9.31      2132.28   24461909 5599693020
+    # "sdz",  # 38.65  9.31      2132.28   24461909 5599693020
     "sdaa",  # 18.74       550.61      250.34 1445976432  657423160
     "sdab",  # 15.61       351.95      205.22  924285904  538939484
     "sdac",  # 17.72       525.83      230.12 1380912544  604320112
@@ -111,7 +111,7 @@ buffered=0
 ioengine=libaio
 iodepth={}""".format(test_name, block_size, disk_name, rw, iodepth)
     if random_offset:
-        config += '\noffset={}'.format(np.random.randint(100) + 1)
+        config += '\noffset={}%'.format(random.randint(1, 99))
     return config
 
 # test = """[readtest]

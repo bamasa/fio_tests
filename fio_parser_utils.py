@@ -35,7 +35,9 @@ def parse_avg_std(result, parameter, without=[]):
                 mean = mean * time_mult
                 std_dev = std_dev * time_mult
                 return mean, std_dev
-    raise Exception("'{}' not found".format(parameter))
+    print("\n\n\n", result)
+    raise Exception(
+        "Parameter '{}' not found in test:\n\n{}".format(parameter, result))
 
 
 def parse_transmission_time(result):

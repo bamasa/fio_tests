@@ -1,3 +1,7 @@
+import argparse
+import sys
+from collections import OrderedDict
+
 from fio_parser_utils import (
     TIME_MULTS, READ_TEST_NAMES, WRITE_TEST_NAMES, READ_WRITE_TEST_NAMES,
     parse_transmission_time, parse_latency_time, parse_processing_time,
@@ -175,9 +179,21 @@ def parse_fio_tests(json_path="fio_tests_node_1.json", output_type="normal"):
     return packet_config
 
 
-def main():
-    result = parse_fio_tests("fio_tests/fio_tests_node_sdf.json")
-    save_json(result, "packet_configs/packet_config_sdf.json")
+def main(args):
+    parser = argparse.ArgumentParser()
+
+    parser.add_argument("-test", "--test_path", type=str,
+                        default="fio_tests/fio_tests_0.json", required=False)
+    parser.add_argument("-config", "--save_config_path", type=str,
+                        default="packet_configs/packet_config_0.json", required=False)
+
+    args = parser.parse_args(args)
+
+    test_path = args.test_path
+    save_config_path = args.save_config_path
+
+    result = parse_fio_tests(test_path)
+    save_json(result, save_config_path)
 
 if __name__ == "__main__":
-    main()
+    main(sys.argv[1:])
