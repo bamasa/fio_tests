@@ -1,0 +1,1032 @@
+{
+  "4K": {
+    "size": 4000,
+    "transmission_time": {
+      "mean": 2.1903183749999998e-05,
+      "std_dev": 0.0002130209456501872
+    },
+    "latency_time": {
+      "mean": 0.0075115452499999995,
+      "std_dev": 0.01491748665459433
+    },
+    "read_processing_time": {
+      "mean": 0.005393275544499999,
+      "std_dev": 0.010432284713781803
+    },
+    "write_processing_time": {
+      "mean": 0.0095842555,
+      "std_dev": 0.010668557484027539
+    },
+    "seq_read": {
+      "rate_time": {
+        "mean": 0.00016671193027728988,
+        "std_dev": 0.0
+      },
+      "seek_time": {
+        "mean": 0.00016671242544816692,
+        "std_dev": 0.0
+      },
+      "overheads_time": {
+        "mean": 3e-06,
+        "std_dev": 0.0
+      }
+    },
+    "seq_write": {
+      "rate_time": {
+        "mean": 0.008391515524543047,
+        "std_dev": 0.0
+      },
+      "seek_time": {
+        "mean": 0.00839264221619497,
+        "std_dev": 0.0
+      },
+      "overheads_time": {
+        "mean": 3e-06,
+        "std_dev": 0.0
+      }
+    },
+    "rand_read": {
+      "rate_time": {
+        "mean": 0.010538508279928289,
+        "std_dev": 0.0
+      },
+      "seek_time": {
+        "mean": 0.010541086175638011,
+        "std_dev": 0.0
+      },
+      "overheads_time": {
+        "mean": 3e-06,
+        "std_dev": 0.0
+      }
+    },
+    "rand_write": {
+      "rate_time": {
+        "mean": 0.011045768601399908,
+        "std_dev": 0.0
+      },
+      "seek_time": {
+        "mean": 0.01104878520126599,
+        "std_dev": 0.0
+      },
+      "overheads_time": {
+        "mean": 3e-06,
+        "std_dev": 0.0
+      }
+    },
+    "seq_read_write": {
+      "rate_time": {
+        "mean": 0.008609052250686759,
+        "std_dev": 0.0
+      },
+      "seek_time": {
+        "mean": 0.008610106243402884,
+        "std_dev": 0.0
+      },
+      "overheads_time": {
+        "mean": 3e-06,
+        "std_dev": 0.0
+      }
+    },
+    "rand_read_write": {
+      "rate_time": {
+        "mean": 0.021563904487044993,
+        "std_dev": 0.0
+      },
+      "seek_time": {
+        "mean": 0.021577070338518457,
+        "std_dev": 0.0
+      },
+      "overheads_time": {
+        "mean": 3e-06,
+        "std_dev": 0.0
+      }
+    }
+  },
+  "8K": {
+    "size": 8000,
+    "transmission_time": {
+      "mean": 2.14167495e-05,
+      "std_dev": 0.00013102795133443856
+    },
+    "latency_time": {
+      "mean": 0.007056626499999999,
+      "std_dev": 0.013914955658211778
+    },
+    "read_processing_time": {
+      "mean": 0.00505590894,
+      "std_dev": 0.009884785763427814
+    },
+    "write_processing_time": {
+      "mean": 0.0090127635,
+      "std_dev": 0.009793158205604564
+    },
+    "seq_read": {
+      "rate_time": {
+        "mean": 0.00017840115760639524,
+        "std_dev": 0.0
+      },
+      "seek_time": {
+        "mean": 0.0001784015061498797,
+        "std_dev": 0.0
+      },
+      "overheads_time": {
+        "mean": 3e-06,
+        "std_dev": 0.0
+      }
+    },
+    "seq_write": {
+      "rate_time": {
+        "mean": 0.008430210068461716,
+        "std_dev": 0.0
+      },
+      "seek_time": {
+        "mean": 0.008430742745029817,
+        "std_dev": 0.0
+      },
+      "overheads_time": {
+        "mean": 3e-06,
+        "std_dev": 0.0
+      }
+    },
+    "rand_read": {
+      "rate_time": {
+        "mean": 0.010629142703021814,
+        "std_dev": 0.0
+      },
+      "seek_time": {
+        "mean": 0.01063078840516599,
+        "std_dev": 0.0
+      },
+      "overheads_time": {
+        "mean": 3e-06,
+        "std_dev": 0.0
+      }
+    },
+    "rand_write": {
+      "rate_time": {
+        "mean": 0.010094577733794772,
+        "std_dev": 0.0
+      },
+      "seek_time": {
+        "mean": 0.010096556968749787,
+        "std_dev": 0.0
+      },
+      "overheads_time": {
+        "mean": 3e-06,
+        "std_dev": 0.0
+      }
+    },
+    "seq_read_write": {
+      "rate_time": {
+        "mean": 0.008592633910395353,
+        "std_dev": 0.0
+      },
+      "seek_time": {
+        "mean": 0.008593705814434516,
+        "std_dev": 0.0
+      },
+      "overheads_time": {
+        "mean": 3e-06,
+        "std_dev": 0.0
+      }
+    },
+    "rand_read_write": {
+      "rate_time": {
+        "mean": 0.01872992717251553,
+        "std_dev": 0.0
+      },
+      "seek_time": {
+        "mean": 0.018737485799977492,
+        "std_dev": 0.0
+      },
+      "overheads_time": {
+        "mean": 3e-06,
+        "std_dev": 0.0
+      }
+    }
+  },
+  "16K": {
+    "size": 16000,
+    "transmission_time": {
+      "mean": 2.2062069750000002e-05,
+      "std_dev": 0.00016497776686332617
+    },
+    "latency_time": {
+      "mean": 0.007703682249999999,
+      "std_dev": 0.014782656368190393
+    },
+    "read_processing_time": {
+      "mean": 0.005669506701999999,
+      "std_dev": 0.010438930567146355
+    },
+    "write_processing_time": {
+      "mean": 0.009691956,
+      "std_dev": 0.010465815447923778
+    },
+    "seq_read": {
+      "rate_time": {
+        "mean": 0.00019753584834826285,
+        "std_dev": 0.0
+      },
+      "seek_time": {
+        "mean": 0.00019753642348425434,
+        "std_dev": 0.0
+      },
+      "overheads_time": {
+        "mean": 3e-06,
+        "std_dev": 0.0
+      }
+    },
+    "seq_write": {
+      "rate_time": {
+        "mean": 0.008472908570799933,
+        "std_dev": 0.0
+      },
+      "seek_time": {
+        "mean": 0.008474728826856738,
+        "std_dev": 0.0
+      },
+      "overheads_time": {
+        "mean": 3e-06,
+        "std_dev": 0.0
+      }
+    },
+    "rand_read": {
+      "rate_time": {
+        "mean": 0.010988202725100208,
+        "std_dev": 0.0
+      },
+      "seek_time": {
+        "mean": 0.01099076232219046,
+        "std_dev": 0.0
+      },
+      "overheads_time": {
+        "mean": 3e-06,
+        "std_dev": 0.0
+      }
+    },
+    "rand_write": {
+      "rate_time": {
+        "mean": 0.010757591238335449,
+        "std_dev": 0.0
+      },
+      "seek_time": {
+        "mean": 0.010759779472893962,
+        "std_dev": 0.0
+      },
+      "overheads_time": {
+        "mean": 3e-06,
+        "std_dev": 0.0
+      }
+    },
+    "seq_read_write": {
+      "rate_time": {
+        "mean": 0.008660628244609322,
+        "std_dev": 0.0
+      },
+      "seek_time": {
+        "mean": 0.008662408027836027,
+        "std_dev": 0.0
+      },
+      "overheads_time": {
+        "mean": 3e-06,
+        "std_dev": 0.0
+      }
+    },
+    "rand_read_write": {
+      "rate_time": {
+        "mean": 0.02276457518345476,
+        "std_dev": 0.0
+      },
+      "seek_time": {
+        "mean": 0.022783260069302536,
+        "std_dev": 0.0
+      },
+      "overheads_time": {
+        "mean": 3e-06,
+        "std_dev": 0.0
+      }
+    }
+  },
+  "32K": {
+    "size": 32000,
+    "transmission_time": {
+      "mean": 2.214142525e-05,
+      "std_dev": 9.833173368450289e-05
+    },
+    "latency_time": {
+      "mean": 0.00762369,
+      "std_dev": 0.014551001595422906
+    },
+    "read_processing_time": {
+      "mean": 0.005498532830499999,
+      "std_dev": 0.010153105489373659
+    },
+    "write_processing_time": {
+      "mean": 0.009702784499999999,
+      "std_dev": 0.010422941027848139
+    },
+    "seq_read": {
+      "rate_time": {
+        "mean": 0.0002691809111203109,
+        "std_dev": 0.0
+      },
+      "seek_time": {
+        "mean": 0.0002691817406006742,
+        "std_dev": 0.0
+      },
+      "overheads_time": {
+        "mean": 3e-06,
+        "std_dev": 0.0
+      }
+    },
+    "seq_write": {
+      "rate_time": {
+        "mean": 0.00865870034921068,
+        "std_dev": 0.0
+      },
+      "seek_time": {
+        "mean": 0.008659433064642466,
+        "std_dev": 0.0
+      },
+      "overheads_time": {
+        "mean": 3e-06,
+        "std_dev": 0.0
+      }
+    },
+    "rand_read": {
+      "rate_time": {
+        "mean": 0.010305357508243431,
+        "std_dev": 0.0
+      },
+      "seek_time": {
+        "mean": 0.010307328228807974,
+        "std_dev": 0.0
+      },
+      "overheads_time": {
+        "mean": 3e-06,
+        "std_dev": 0.0
+      }
+    },
+    "rand_write": {
+      "rate_time": {
+        "mean": 0.01070312506565679,
+        "std_dev": 0.0
+      },
+      "seek_time": {
+        "mean": 0.01070632538447108,
+        "std_dev": 0.0
+      },
+      "overheads_time": {
+        "mean": 3e-06,
+        "std_dev": 0.0
+      }
+    },
+    "seq_read_write": {
+      "rate_time": {
+        "mean": 0.008799406484374708,
+        "std_dev": 0.0
+      },
+      "seek_time": {
+        "mean": 0.00880150218214703,
+        "std_dev": 0.0
+      },
+      "overheads_time": {
+        "mean": 3e-06,
+        "std_dev": 0.0
+      }
+    },
+    "rand_read_write": {
+      "rate_time": {
+        "mean": 0.022478405041196046,
+        "std_dev": 0.0
+      },
+      "seek_time": {
+        "mean": 0.02249441914105936,
+        "std_dev": 0.0
+      },
+      "overheads_time": {
+        "mean": 3e-06,
+        "std_dev": 0.0
+      }
+    }
+  },
+  "64K": {
+    "size": 64000,
+    "transmission_time": {
+      "mean": 2.3090858e-05,
+      "std_dev": 8.428145955285776e-05
+    },
+    "latency_time": {
+      "mean": 0.0079881905,
+      "std_dev": 0.014954102148908839
+    },
+    "read_processing_time": {
+      "mean": 0.00581141481,
+      "std_dev": 0.010442355485277796
+    },
+    "write_processing_time": {
+      "mean": 0.010116988999999998,
+      "std_dev": 0.010703780722249498
+    },
+    "seq_read": {
+      "rate_time": {
+        "mean": 0.0005507157843451214,
+        "std_dev": 0.0
+      },
+      "seek_time": {
+        "mean": 0.0005507182687469421,
+        "std_dev": 0.0
+      },
+      "overheads_time": {
+        "mean": 3e-06,
+        "std_dev": 0.0
+      }
+    },
+    "seq_write": {
+      "rate_time": {
+        "mean": 0.008856605942969316,
+        "std_dev": 0.0
+      },
+      "seek_time": {
+        "mean": 0.008858148495382634,
+        "std_dev": 0.0
+      },
+      "overheads_time": {
+        "mean": 3e-06,
+        "std_dev": 0.0
+      }
+    },
+    "rand_read": {
+      "rate_time": {
+        "mean": 0.011104282084774316,
+        "std_dev": 0.0
+      },
+      "seek_time": {
+        "mean": 0.01111009966937372,
+        "std_dev": 0.0
+      },
+      "overheads_time": {
+        "mean": 3e-06,
+        "std_dev": 0.0
+      }
+    },
+    "rand_write": {
+      "rate_time": {
+        "mean": 0.011859289582426776,
+        "std_dev": 0.0
+      },
+      "seek_time": {
+        "mean": 0.011862413030490963,
+        "std_dev": 0.0
+      },
+      "overheads_time": {
+        "mean": 3e-06,
+        "std_dev": 0.0
+      }
+    },
+    "seq_read_write": {
+      "rate_time": {
+        "mean": 0.009034965065259106,
+        "std_dev": 0.0
+      },
+      "seek_time": {
+        "mean": 0.009036326139867943,
+        "std_dev": 0.0
+      },
+      "overheads_time": {
+        "mean": 3e-06,
+        "std_dev": 0.0
+      }
+    },
+    "rand_read_write": {
+      "rate_time": {
+        "mean": 0.022726061277860914,
+        "std_dev": 0.0
+      },
+      "seek_time": {
+        "mean": 0.022733410705858714,
+        "std_dev": 0.0
+      },
+      "overheads_time": {
+        "mean": 3e-06,
+        "std_dev": 0.0
+      }
+    }
+  },
+  "128K": {
+    "size": 128000,
+    "transmission_time": {
+      "mean": 2.4366283249999997e-05,
+      "std_dev": 0.00011023940129182486
+    },
+    "latency_time": {
+      "mean": 0.00828462975,
+      "std_dev": 0.014670221534796262
+    },
+    "read_processing_time": {
+      "mean": 0.0059707399999999996,
+      "std_dev": 0.010064092690352171
+    },
+    "write_processing_time": {
+      "mean": 0.0105479205,
+      "std_dev": 0.010673595254177479
+    },
+    "seq_read": {
+      "rate_time": {
+        "mean": 0.0011527002903715879,
+        "std_dev": 0.0
+      },
+      "seek_time": {
+        "mean": 0.001152716284143447,
+        "std_dev": 0.0
+      },
+      "overheads_time": {
+        "mean": 3e-06,
+        "std_dev": 0.0
+      }
+    },
+    "seq_write": {
+      "rate_time": {
+        "mean": 0.009364065158261447,
+        "std_dev": 0.0
+      },
+      "seek_time": {
+        "mean": 0.009366501397686782,
+        "std_dev": 0.0
+      },
+      "overheads_time": {
+        "mean": 3e-06,
+        "std_dev": 0.0
+      }
+    },
+    "rand_read": {
+      "rate_time": {
+        "mean": 0.010629206523698873,
+        "std_dev": 0.0
+      },
+      "seek_time": {
+        "mean": 0.010631980068780331,
+        "std_dev": 0.0
+      },
+      "overheads_time": {
+        "mean": 3e-06,
+        "std_dev": 0.0
+      }
+    },
+    "rand_write": {
+      "rate_time": {
+        "mean": 0.012227773902408789,
+        "std_dev": 0.0
+      },
+      "seek_time": {
+        "mean": 0.012231452377764618,
+        "std_dev": 0.0
+      },
+      "overheads_time": {
+        "mean": 3e-06,
+        "std_dev": 0.0
+      }
+    },
+    "seq_read_write": {
+      "rate_time": {
+        "mean": 0.00982064940666651,
+        "std_dev": 0.0
+      },
+      "seek_time": {
+        "mean": 0.00982229061221089,
+        "std_dev": 0.0
+      },
+      "overheads_time": {
+        "mean": 3e-06,
+        "std_dev": 0.0
+      }
+    },
+    "rand_read_write": {
+      "rate_time": {
+        "mean": 0.023339604178567654,
+        "std_dev": 0.0
+      },
+      "seek_time": {
+        "mean": 0.02335378084245645,
+        "std_dev": 0.0
+      },
+      "overheads_time": {
+        "mean": 3e-06,
+        "std_dev": 0.0
+      }
+    }
+  },
+  "256K": {
+    "size": 256000,
+    "transmission_time": {
+      "mean": 2.7018419000000004e-05,
+      "std_dev": 0.00012912680387417634
+    },
+    "latency_time": {
+      "mean": 0.009515616,
+      "std_dev": 0.01628478239799353
+    },
+    "read_processing_time": {
+      "mean": 0.007391203499999999,
+      "std_dev": 0.011223441948885377
+    },
+    "write_processing_time": {
+      "mean": 0.011584150999999999,
+      "std_dev": 0.011800015458888178
+    },
+    "seq_read": {
+      "rate_time": {
+        "mean": 0.0021221144808208723,
+        "std_dev": 0.0
+      },
+      "seek_time": {
+        "mean": 0.0021221765539228494,
+        "std_dev": 0.0
+      },
+      "overheads_time": {
+        "mean": 3e-06,
+        "std_dev": 0.0
+      }
+    },
+    "seq_write": {
+      "rate_time": {
+        "mean": 0.010253699182682001,
+        "std_dev": 0.0
+      },
+      "seek_time": {
+        "mean": 0.010256595676975119,
+        "std_dev": 0.0
+      },
+      "overheads_time": {
+        "mean": 3e-06,
+        "std_dev": 0.0
+      }
+    },
+    "rand_read": {
+      "rate_time": {
+        "mean": 0.012635358667498204,
+        "std_dev": 0.0
+      },
+      "seek_time": {
+        "mean": 0.012640838292787305,
+        "std_dev": 0.0
+      },
+      "overheads_time": {
+        "mean": 3e-06,
+        "std_dev": 0.0
+      }
+    },
+    "rand_write": {
+      "rate_time": {
+        "mean": 0.0129622919835407,
+        "std_dev": 0.0
+      },
+      "seek_time": {
+        "mean": 0.012964054364089404,
+        "std_dev": 0.0
+      },
+      "overheads_time": {
+        "mean": 3e-06,
+        "std_dev": 0.0
+      }
+    },
+    "seq_read_write": {
+      "rate_time": {
+        "mean": 0.011341398166834738,
+        "std_dev": 0.0
+      },
+      "seek_time": {
+        "mean": 0.011344460799116003,
+        "std_dev": 0.0
+      },
+      "overheads_time": {
+        "mean": 3e-06,
+        "std_dev": 0.0
+      }
+    },
+    "rand_read_write": {
+      "rate_time": {
+        "mean": 0.027072139182647986,
+        "std_dev": 0.0
+      },
+      "seek_time": {
+        "mean": 0.02709525969340094,
+        "std_dev": 0.0
+      },
+      "overheads_time": {
+        "mean": 3e-06,
+        "std_dev": 0.0
+      }
+    }
+  },
+  "512K": {
+    "size": 512000,
+    "transmission_time": {
+      "mean": 3.191429975e-05,
+      "std_dev": 0.00019664258369796203
+    },
+    "latency_time": {
+      "mean": 0.011860965499999997,
+      "std_dev": 0.01798261101397681
+    },
+    "read_processing_time": {
+      "mean": 0.0098101715,
+      "std_dev": 0.013267905364826808
+    },
+    "write_processing_time": {
+      "mean": 0.013846082499999999,
+      "std_dev": 0.012137455068505916
+    },
+    "seq_read": {
+      "rate_time": {
+        "mean": 0.004343324612378673,
+        "std_dev": 0.0
+      },
+      "seek_time": {
+        "mean": 0.004343700324866278,
+        "std_dev": 0.0
+      },
+      "overheads_time": {
+        "mean": 3e-06,
+        "std_dev": 0.0
+      }
+    },
+    "seq_write": {
+      "rate_time": {
+        "mean": 0.011868955722894935,
+        "std_dev": 0.0
+      },
+      "seek_time": {
+        "mean": 0.011872566879955549,
+        "std_dev": 0.0
+      },
+      "overheads_time": {
+        "mean": 3e-06,
+        "std_dev": 0.0
+      }
+    },
+    "rand_read": {
+      "rate_time": {
+        "mean": 0.015243254761318156,
+        "std_dev": 0.0
+      },
+      "seek_time": {
+        "mean": 0.015250535523372907,
+        "std_dev": 0.0
+      },
+      "overheads_time": {
+        "mean": 3e-06,
+        "std_dev": 0.0
+      }
+    },
+    "rand_write": {
+      "rate_time": {
+        "mean": 0.015916036644325574,
+        "std_dev": 0.0
+      },
+      "seek_time": {
+        "mean": 0.015920499962897655,
+        "std_dev": 0.0
+      },
+      "overheads_time": {
+        "mean": 3e-06,
+        "std_dev": 0.0
+      }
+    },
+    "seq_read_write": {
+      "rate_time": {
+        "mean": 0.01606897237601355,
+        "std_dev": 0.0
+      },
+      "seek_time": {
+        "mean": 0.016074707291035724,
+        "std_dev": 0.0
+      },
+      "overheads_time": {
+        "mean": 3e-06,
+        "std_dev": 0.0
+      }
+    },
+    "rand_read_write": {
+      "rate_time": {
+        "mean": 0.03174186788056658,
+        "std_dev": 0.0
+      },
+      "seek_time": {
+        "mean": 0.03175589112605497,
+        "std_dev": 0.0
+      },
+      "overheads_time": {
+        "mean": 3e-06,
+        "std_dev": 0.0
+      }
+    }
+  },
+  "1024K": {
+    "size": 1024000,
+    "transmission_time": {
+      "mean": 3.912317425e-05,
+      "std_dev": 0.0001306227632060737
+    },
+    "latency_time": {
+      "mean": 0.01668687425,
+      "std_dev": 0.020659448950056728
+    },
+    "read_processing_time": {
+      "mean": 0.014453081000000001,
+      "std_dev": 0.015547295362538141
+    },
+    "write_processing_time": {
+      "mean": 0.0188405995,
+      "std_dev": 0.013606680448221014
+    },
+    "seq_read": {
+      "rate_time": {
+        "mean": 0.00792621731904562,
+        "std_dev": 0.0
+      },
+      "seek_time": {
+        "mean": 0.007928349776569405,
+        "std_dev": 0.0
+      },
+      "overheads_time": {
+        "mean": 3e-06,
+        "std_dev": 0.0
+      }
+    },
+    "seq_write": {
+      "rate_time": {
+        "mean": 0.0181586823594992,
+        "std_dev": 0.0
+      },
+      "seek_time": {
+        "mean": 0.01817027920013104,
+        "std_dev": 0.0
+      },
+      "overheads_time": {
+        "mean": 3e-06,
+        "std_dev": 0.0
+      }
+    },
+    "rand_read": {
+      "rate_time": {
+        "mean": 0.020595630823199707,
+        "std_dev": 0.0
+      },
+      "seek_time": {
+        "mean": 0.020619507237025686,
+        "std_dev": 0.0
+      },
+      "overheads_time": {
+        "mean": 3e-06,
+        "std_dev": 0.0
+      }
+    },
+    "rand_write": {
+      "rate_time": {
+        "mean": 0.02071825542693676,
+        "std_dev": 0.0
+      },
+      "seek_time": {
+        "mean": 0.02072569332757565,
+        "std_dev": 0.0
+      },
+      "overheads_time": {
+        "mean": 3e-06,
+        "std_dev": 0.0
+      }
+    },
+    "seq_read_write": {
+      "rate_time": {
+        "mean": 0.025069756292820183,
+        "std_dev": 0.0
+      },
+      "seek_time": {
+        "mean": 0.025092999584665193,
+        "std_dev": 0.0
+      },
+      "overheads_time": {
+        "mean": 3e-06,
+        "std_dev": 0.0
+      }
+    },
+    "rand_read_write": {
+      "rate_time": {
+        "mean": 0.04129936207972153,
+        "std_dev": 0.0
+      },
+      "seek_time": {
+        "mean": 0.04134239202811245,
+        "std_dev": 0.0
+      },
+      "overheads_time": {
+        "mean": 3e-06,
+        "std_dev": 0.0
+      }
+    }
+  },
+  "2048K": {
+    "size": 2048000,
+    "transmission_time": {
+      "mean": 6.4773851e-05,
+      "std_dev": 0.0002387668357378176
+    },
+    "latency_time": {
+      "mean": 0.02618252375,
+      "std_dev": 0.02871400390279976
+    },
+    "read_processing_time": {
+      "mean": 0.023674140999999996,
+      "std_dev": 0.022945920143241153
+    },
+    "write_processing_time": {
+      "mean": 0.028559494499999998,
+      "std_dev": 0.017266176976968584
+    },
+    "seq_read": {
+      "rate_time": {
+        "mean": 0.018648678842684247,
+        "std_dev": 0.0
+      },
+      "seek_time": {
+        "mean": 0.018656953117108233,
+        "std_dev": 0.0
+      },
+      "overheads_time": {
+        "mean": 3e-06,
+        "std_dev": 0.0
+      }
+    },
+    "seq_write": {
+      "rate_time": {
+        "mean": 0.027201053847339108,
+        "std_dev": 0.0
+      },
+      "seek_time": {
+        "mean": 0.027224450065876853,
+        "std_dev": 0.0
+      },
+      "overheads_time": {
+        "mean": 3e-06,
+        "std_dev": 0.0
+      }
+    },
+    "rand_read": {
+      "rate_time": {
+        "mean": 0.02993846165497536,
+        "std_dev": 0.0
+      },
+      "seek_time": {
+        "mean": 0.029969417026401164,
+        "std_dev": 0.0
+      },
+      "overheads_time": {
+        "mean": 3e-06,
+        "std_dev": 0.0
+      }
+    },
+    "rand_write": {
+      "rate_time": {
+        "mean": 0.03210490430927411,
+        "std_dev": 0.0
+      },
+      "seek_time": {
+        "mean": 0.03212010017834664,
+        "std_dev": 0.0
+      },
+      "overheads_time": {
+        "mean": 3e-06,
+        "std_dev": 0.0
+      }
+    },
+    "seq_read_write": {
+      "rate_time": {
+        "mean": 0.04150187145437077,
+        "std_dev": 0.0
+      },
+      "seek_time": {
+        "mean": 0.04156998465006949,
+        "std_dev": 0.0
+      },
+      "overheads_time": {
+        "mean": 3e-06,
+        "std_dev": 0.0
+      }
+    },
+    "rand_read_write": {
+      "rate_time": {
+        "mean": 0.06056716350611959,
+        "std_dev": 0.0
+      },
+      "seek_time": {
+        "mean": 0.060699827359977386,
+        "std_dev": 0.0
+      },
+      "overheads_time": {
+        "mean": 3e-06,
+        "std_dev": 0.0
+      }
+    }
+  }
+}

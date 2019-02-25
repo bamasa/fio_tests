@@ -64,10 +64,8 @@ def parse_rate_time(result, block_size):
     """Parse rate time using fio bandwidth."""
     bw_mean, bw_std_dev = parse_avg_std(result, "bw(")
     rate_mean = block_size / bw_mean
-    # TODO: math approach for std
-    # rate_std_dev = np.std(
-    #     block_size / np.random.normal(bw_mean, bw_std_dev, 10 ** 5))
-    rate_std_dev = 0
+    rate_std_dev = np.std(
+        block_size / np.random.normal(bw_mean, bw_std_dev, 10 ** 4))
     return rate_mean, rate_std_dev
 
 
@@ -80,7 +78,9 @@ def parse_seek_time(result):
     # TODO: math approach for std
     iops_mean, iops_std_dev = parse_avg_std(result, "iops:")
     seek_mean = 1 / iops_mean
-    return seek_mean, 0
+    see_std_dev = np.std(
+        1 / np.random.normal(iops_mean, iops_std_dev, 10 ** 4))
+    return seek_mean, see_std_dev
 
 
 def parse_overheads_time(result):
