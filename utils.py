@@ -18,7 +18,7 @@ class NestedDictEncoder():
             VAE and/or other encoders
 
         '''
-        self.features_types_dict = OrderedDict(features_types_dict)
+        self.features_types_dict = OrderedDict(deepcopy(features_types_dict))
 
         self._features_types = list(
             self._get_nested_dict_values(self.features_types_dict))
@@ -38,6 +38,7 @@ class NestedDictEncoder():
 
     def encode(self, nested_dict):
         """Encodes nested dict."""
+        nested_dict = deepcopy(nested_dict)
         nested_dict = self.order_dict(nested_dict)
         values = list(self._get_nested_dict_values(nested_dict))
         values = self._encode_categorical_features(values)
@@ -45,9 +46,10 @@ class NestedDictEncoder():
 
     def decode(self, values):
         """Decodes nested dict."""
-        temp_dict = self.features_types_dict.copy()
+        values = deepcopy(values)
+        temp_dict = deepcopy(self.features_types_dict)
         self._temp_idx = 0
-        self._temp_values = list(values).copy()
+        self._temp_values = list(deepcopy(values))
         self._temp_values = self._decode_categorical_features(
             self._temp_values)
         self._set_nested_dict_values(temp_dict)
@@ -57,6 +59,7 @@ class NestedDictEncoder():
 
     def order_dict(self, nested_dict):
         """Orders dict by initial dict."""
+        nested_dict = deepcopy(nested_dict)
         temp_dict = self.features_types_dict.copy()
         self._temp_values = list(self._get_nested_dict_values_by_order(
             nested_dict, self.features_types_dict))
@@ -105,7 +108,7 @@ class NestedDictEncoder():
                 yield v
 
     def _encode_categorical_features(self, values):
-        encoded_values = values.copy()
+        encoded_values = deepcopy(values)
         for i in self._cat_features_idx:
             v = values[i]
             if v not in self._cat_val_to_code:
@@ -116,7 +119,7 @@ class NestedDictEncoder():
         return encoded_values
 
     def _decode_categorical_features(self, values, default='-999'):
-        decoded_values = values.copy()
+        decoded_values = deepcopy(values)
         for i in self._cat_features_idx:
             v = values[i]
             cat = self._code_to_cat_val[
